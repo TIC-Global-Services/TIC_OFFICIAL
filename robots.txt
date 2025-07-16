@@ -1,0 +1,12 @@
+# TIC Global Services robots.txt
+
+
+User-agent: *
+Disallow:
+
+
+User-agent: *
+Allow: /
+
+
+Sitemap: https://www.theinternetcompany.one/sitemap.xml
