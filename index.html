@@ -499,10 +499,475 @@
             </script>
           </div>
         </div>
-        <!-- <div class="button-container-flex vertical-gap"><a href="./client.html#form-section"
-          class="primary-button-arrow-white big hero w-button">Book a meeting</a>
        
-      </div> -->
+
+
+        <style>
+          body {
+              margin: 0;
+              padding: 0;
+              height: 100vh;
+              overflow: hidden;
+              position: relative;
+          }
+  
+          .tic-container {
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              z-index: 1000;
+          }
+  
+          .tic-button {
+              width: 100%;
+              background: rgba(0, 0, 0, 0.3);
+              border: 2px solid rgba(31, 68, 151, 0.3);
+              border-radius: 25px;
+              padding: 15px 20px;
+              color: white;
+              font-size: 16px;
+              font-family: inherit;
+              outline: none;
+              transition: all 0.3s;
+              box-sizing: border-box;
+              cursor: pointer;
+              position: relative;
+              overflow: hidden;
+          }
+  
+          .tic-button::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg, transparent, rgba(31, 68, 151, 0.2), transparent);
+              transition: left 0.5s;
+          }
+  
+          .tic-button:hover::before {
+              left: 100%;
+          }
+  
+          .tic-button:hover {
+              transform: translateY(-3px) scale(1.05);
+              box-shadow: 
+                0 0 40px rgba(31, 68, 151, 0.6),
+                0 15px 35px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+          }
+  
+          .tic-button:active {
+              transform: translateY(-1px) scale(1.02);
+          }
+  
+          .input-container {
+              display: none;
+              background: rgba(15, 15, 35, 0.95);
+              border-radius: 35px;
+              padding: 20px;
+              backdrop-filter: blur(20px);
+              border: 1px solid rgba(31, 68, 151, 0.3);
+            box-shadow: 
+                0 0 50px rgba(31, 68, 151, 0.2),
+                0 20px 40px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            animation: expandIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+  
+          @keyframes expandIn {
+              0% {
+                  transform: scale(0);
+                  opacity: 0;
+              }
+              100% {
+                  transform: scale(1);
+                  opacity: 1;
+              }
+          }
+  
+          .input-header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 15px;
+          }
+  
+          .input-title {
+            color: #1f4497;
+              font-weight: 700;
+              font-size: 18px;
+              
+        
+              text-shadow: 0 0 10px rgba(31, 68, 151, 0.5);
+          }
+  
+          .close-btn {
+              background: none;
+              border: none;
+              color: rgba(255, 255, 255, 0.6);
+              font-size: 20px;
+              cursor: pointer;
+              padding: 5px;
+              border-radius: 50%;
+              transition: all 0.3s;
+          }
+  
+          .close-btn:hover {
+              color: #ff4757;
+              background: rgba(255, 71, 87, 0.1);
+          }
+  
+          .question-input {
+              width: 100%;
+              background: rgba(0, 0, 0, 0.3);
+              border: 2px solid rgba(31, 68, 151, 0.3);
+              border-radius: 25px;
+              padding: 15px 20px;
+              color: white;
+              font-size: 16px;
+              font-family: inherit;
+              outline: none;
+              transition: all 0.3s;
+              box-sizing: border-box;
+          }
+  
+          .question-input::placeholder {
+              color: rgba(255, 255, 255, 0.4);
+          }
+  
+          .question-input:focus {
+            border-color: #1f4497;
+            box-shadow: 0 0 20px rgba(31, 68, 151, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+          }
+  
+          .question-input.error {
+              border-color: #ff4757;
+              box-shadow: 0 0 20px rgba(255, 71, 87, 0.5);
+          }
+  
+          .input-hint {
+              color: rgba(255, 255, 255, 0.5);
+              font-size: 12px;
+              margin-top: 10px;
+              text-align: center;
+              font-style: italic;
+          }
+  
+          .error-message {
+              color: #ff4757;
+              font-size: 12px;
+              margin-top: 8px;
+              text-align: center;
+              opacity: 0;
+              transition: opacity 0.3s;
+          }
+  
+          .error-message.show {
+              opacity: 1;
+          }
+  
+          /* Glitch effect for button text */
+          .tic-button.glitch {
+              animation: glitch 0.3s;
+          }
+  
+          @keyframes glitch {
+              0% { transform: translate(0); }
+              20% { transform: translate(-2px, 2px); }
+              40% { transform: translate(-2px, -2px); }
+              60% { transform: translate(2px, 2px); }
+              80% { transform: translate(2px, -2px); }
+              100% { transform: translate(0); }
+          }
+  
+          /* Shake animation for validation error */
+          .shake {
+              animation: shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          }
+  
+          @keyframes shake {
+              0%, 100% { transform: translateX(0); }
+              10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+              20%, 40%, 60%, 80% { transform: translateX(8px); }
+          }
+  
+          /* Typing indicator */
+          .typing-indicator {
+              display: none;
+              color: rgba(31, 68, 151, 0.7);
+              font-size: 14px;
+              margin-top: 10px;
+              text-align: center;
+          }
+  
+          .typing-indicator::after {
+              content: '';
+              display: inline-block;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background: #1f4497;
+              animation: blink 1.5s infinite;
+              margin-left: 5px;
+          }
+  
+          @keyframes blink {
+              0%, 50% { opacity: 1; }
+              51%, 100% { opacity: 0; }
+          }
+  
+          @keyframes slideIn {
+              from {
+                  transform: translateX(100%);
+                  opacity: 0;
+              }
+              to {
+                  transform: translateX(0);
+                  opacity: 1;
+              }
+          }
+      </style>
+      <div class="tic-container">
+          <button class="tic-button" id="ticButton">
+              <span>Ask TIC</span>
+          </button>
+          
+          <div class="input-container" id="inputContainer">
+              <div class="input-header">
+                  <div class="input-title">TIC Global Services</div>
+                  <button class="close-btn" id="closeBtn">×</button>
+              </div>
+              <input 
+                  type="text" 
+                  class="question-input" 
+                  id="questionInput" 
+                  placeholder="Ask us anything..."
+                  autocomplete="off"
+                  maxlength="500"
+              >
+              <div class="error-message" id="errorMessage">Please enter a question before submitting!</div>
+              <div class="input-hint">Press Enter to send</div>
+              <div class="typing-indicator" id="typingIndicator">Processing your question...</div>
+          </div>
+      </div>
+  
+      <script>
+        class TICWidget {
+            constructor() {
+                this.initializeElements();
+                this.setupEventListeners();
+                this.config = {
+                    scriptUrl: 'https://script.google.com/macros/s/AKfycbwFBkkS5Pi8grmPxMoLrwr4CYXFjsP_bGSUlnUot8wBegbKjErRefJYDMdOxxSFwGPbHw/exec',
+                    maxRetries: 3,
+                    retryDelay: 1000
+                };
+                
+                console.log('TIC Widget initialized with URL:', this.config.scriptUrl);
+            }
+        
+            initializeElements() {
+                this.ticButton = document.getElementById('ticButton');
+                this.inputContainer = document.getElementById('inputContainer');
+                this.closeBtn = document.getElementById('closeBtn');
+                this.questionInput = document.getElementById('questionInput');
+                this.typingIndicator = document.getElementById('typingIndicator');
+                this.errorMessage = document.getElementById('errorMessage');
+            }
+        
+            setupEventListeners() {
+                this.ticButton.addEventListener('click', () => this.openWidget());
+                this.closeBtn.addEventListener('click', () => this.closeWidget());
+                this.questionInput.addEventListener('keypress', (e) => this.handleKeyPress(e));
+                this.questionInput.addEventListener('input', () => this.clearError());
+                
+                document.addEventListener('click', (e) => this.handleOutsideClick(e));
+            }
+        
+            openWidget() {
+                this.ticButton.classList.add('glitch');
+                setTimeout(() => this.ticButton.classList.remove('glitch'), 300);
+                
+                this.ticButton.style.display = 'none';
+                this.inputContainer.style.display = 'block';
+                
+                setTimeout(() => {
+                    this.questionInput.focus();
+                }, 100);
+            }
+        
+            closeWidget() {
+                this.inputContainer.style.display = 'none';
+                this.ticButton.style.display = 'block';
+                this.resetForm();
+            }
+        
+            resetForm() {
+                this.questionInput.value = '';
+                this.clearError();
+                this.hideTypingIndicator();
+            }
+        
+            handleKeyPress(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    this.submitQuestion();
+                }
+            }
+        
+            validateInput(question) {
+                if (!question.trim()) {
+                    this.shakeInput();
+                    return false;
+                }
+        
+                if (question.length < 10) {
+                    this.showError('Question must be at least 10 characters long!');
+                    this.shakeInput();
+                    return false;
+                }
+        
+                return true;
+            }
+        
+            showError(message) {
+                this.errorMessage.textContent = message;
+                this.errorMessage.style.color = '#ff4444';
+                this.errorMessage.classList.add('show');
+                this.questionInput.classList.add('error');
+            }
+        
+            showSuccess(message) {
+                this.errorMessage.textContent = message;
+                this.errorMessage.style.color = '#4CAF50';
+                this.errorMessage.classList.add('show');
+                this.questionInput.classList.remove('error');
+            }
+        
+            clearError() {
+                this.errorMessage.classList.remove('show');
+                this.questionInput.classList.remove('error');
+            }
+        
+            shakeInput() {
+                this.inputContainer.classList.add('shake');
+                // setTimeout(() => {
+                //     this.inputContainer.classList.remove('shake');
+                // }, 600);
+            }
+        
+            showTypingIndicator() {
+                this.typingIndicator.style.display = 'block';
+                this.questionInput.disabled = true;
+            }
+        
+            hideTypingIndicator() {
+                this.typingIndicator.style.display = 'none';
+                this.questionInput.disabled = false;
+            }
+        
+            async submitQuestion() {
+                const question = this.questionInput.value.trim();
+                if (!this.validateInput(question)) {
+                    return;
+                }
+        
+                this.showTypingIndicator();
+                this.clearError();
+        
+                try {
+                    const success = await this.submitToGoogleScript(question);
+                    
+                    if (success) {
+                        this.hideTypingIndicator();
+                        this.showSuccess('Question submitted successfully!');
+                        
+                        // Auto-close after 3 seconds
+                        setTimeout(() => {
+                            this.closeWidget();
+                        }, 3000);
+                    } else {
+                        throw new Error('Failed to save question');
+                    }
+                } catch (error) {
+                    console.error('Error saving question:', error);
+                    this.hideTypingIndicator();
+                    this.showError('Failed to submit question. Please try again.');
+                }
+            }
+        
+            async submitToGoogleScript(question, retryCount = 0) {
+                try {
+                    console.log(`Attempt ${retryCount + 1} to submit:`, question);
+                    
+                    const formData = new URLSearchParams();
+                    formData.append('question', question);
+        
+                    const response = await fetch(this.config.scriptUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: formData.toString(),
+                    });
+        
+                    console.log('Response status:', response.status);
+                    
+                    if (response.ok || response.status === 200) {
+                        try {
+                            const responseText = await response.text();
+                            console.log('Response text:', responseText);
+                            
+                            try {
+                                const jsonResponse = JSON.parse(responseText);
+                                console.log('Parsed response:', jsonResponse);
+                                return jsonResponse.result === 'success';
+                            } catch (parseError) {
+                                console.log('Non-JSON response, assuming success');
+                                return true;
+                            }
+                        } catch (textError) {
+                            console.log('Could not read response text, but status OK - assuming success');
+                            return true;
+                        }
+                    } else {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+        
+                } catch (error) {
+                    console.error(`Attempt ${retryCount + 1} failed:`, error);
+                    
+                    if (retryCount < this.config.maxRetries) {
+                        console.log(`Retrying in ${this.config.retryDelay * (retryCount + 1)}ms...`);
+                        await this.delay(this.config.retryDelay * (retryCount + 1));
+                        return this.submitToGoogleScript(question, retryCount + 1);
+                    }
+                    
+                    throw error;
+                }
+            }
+        
+            handleOutsideClick(e) {
+                if (!this.inputContainer.contains(e.target) && !this.ticButton.contains(e.target)) {
+                    if (this.inputContainer.style.display === 'block') {
+                        this.closeWidget();
+                    }
+                }
+            }
+        
+            delay(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+        }
+        
+        // Initialize the widget when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM loaded, initializing TIC Widget...');
+            new TICWidget();
+        });
+        </script>
       </div>
       <div sticky-video-element="" class="home-hero-video-wrapper">
         <div data-w-id="276abc31-2ee8-4d73-58e2-59969b288ca2" class="overlay"></div>
