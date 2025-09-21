@@ -353,7 +353,7 @@
           <a href="./design.html" class="navbar-link">Design House</a><a href="/client.html" class="navbar-link">Client
             portal</a><a href="/archive.html" class="navbar-link">Archive</a>
 
-          <a href="/Courses.html" class="navbar-link">Join Courses</a>
+          <!-- <a href="/Courses.html" class="navbar-link">Join Courses</a> -->
 
         </div>
         <div class="navbar-links-wrapper">
@@ -403,10 +403,10 @@
                   <div class="tag-projects">36</div>
                 </div>
               </a>
-              <a href="/Courses.html" class="menu-links w-inline-block">
-                <h2 data-w-id="dad005cb-5065-ff52-3121-b5586b2d36b6" class="menu-small text-color-white">Join Courses
+              <!-- <a href="/Courses.html" class="menu-links w-inline-block"> -->
+              <!-- <h2 data-w-id="dad005cb-5065-ff52-3121-b5586b2d36b6" class="menu-small text-color-white">Join Courses
                 </h2>
-              </a>
+              </a> -->
               <a href="/contact.html" class="menu-links w-inline-block">
                 <h2 data-w-id="dad005cb-5065-ff52-3121-b5586b2d36b6" class="menu-small text-color-white">Contact</h2>
               </a>
@@ -499,481 +499,519 @@
             </script>
           </div>
         </div>
-       
+
 
 
         <style>
           body {
-              margin: 0;
-              padding: 0;
-              height: 100vh;
-              overflow: hidden;
-              position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
           }
-  
+
           .tic-container {
-              position: fixed;
-              bottom: 20px;
-              right: 20px;
-              z-index: 1000;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
           }
-  
+
           .tic-button {
-              width: 100%;
-              background: rgba(0, 0, 0, 0.3);
-              border: 2px solid rgba(31, 68, 151, 0.3);
-              border-radius: 25px;
-              padding: 15px 20px;
-              color: white;
-              font-size: 16px;
-              font-family: inherit;
-              outline: none;
-              transition: all 0.3s;
-              box-sizing: border-box;
-              cursor: pointer;
-              position: relative;
-              overflow: hidden;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(31, 68, 151, 0.3);
+            border-radius: 25px;
+            padding: 15px 20px;
+            color: white;
+            font-size: 16px;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.3s;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
           }
-  
+
           .tic-button::before {
-              content: '';
-              position: absolute;
-              top: 0;
-              left: -100%;
-              width: 100%;
-              height: 100%;
-              background: linear-gradient(90deg, transparent, rgba(31, 68, 151, 0.2), transparent);
-              transition: left 0.5s;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(31, 68, 151, 0.2), transparent);
+            transition: left 0.5s;
           }
-  
+
           .tic-button:hover::before {
-              left: 100%;
+            left: 100%;
           }
-  
+
           .tic-button:hover {
-              transform: translateY(-3px) scale(1.05);
-              box-shadow: 
-                0 0 40px rgba(31, 68, 151, 0.6),
-                0 15px 35px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow:
+              0 0 40px rgba(31, 68, 151, 0.6),
+              0 15px 35px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
           }
-  
+
           .tic-button:active {
-              transform: translateY(-1px) scale(1.02);
+            transform: translateY(-1px) scale(1.02);
           }
-  
+
           .input-container {
-              display: none;
-              background: rgba(15, 15, 35, 0.95);
-              border-radius: 35px;
-              padding: 20px;
-              backdrop-filter: blur(20px);
-              border: 1px solid rgba(31, 68, 151, 0.3);
-            box-shadow: 
-                0 0 50px rgba(31, 68, 151, 0.2),
-                0 20px 40px rgba(0, 0, 0, 0.3);
+            display: none;
+            background: rgba(15, 15, 35, 0.95);
+            border-radius: 35px;
+            padding: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(31, 68, 151, 0.3);
+            box-shadow:
+              0 0 50px rgba(31, 68, 151, 0.2),
+              0 20px 40px rgba(0, 0, 0, 0.3);
             width: 350px;
             animation: expandIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           }
-  
+
           @keyframes expandIn {
-              0% {
-                  transform: scale(0);
-                  opacity: 0;
-              }
-              100% {
-                  transform: scale(1);
-                  opacity: 1;
-              }
+            0% {
+              transform: scale(0);
+              opacity: 0;
+            }
+
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
           }
-  
+
           .input-header {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
           }
-  
+
           .input-title {
             color: #1f4497;
-              font-weight: 700;
-              font-size: 18px;
-              
-        
-              text-shadow: 0 0 10px rgba(31, 68, 151, 0.5);
+            font-weight: 700;
+            font-size: 18px;
+
+
+            text-shadow: 0 0 10px rgba(31, 68, 151, 0.5);
           }
-  
+
           .close-btn {
-              background: none;
-              border: none;
-              color: rgba(255, 255, 255, 0.6);
-              font-size: 20px;
-              cursor: pointer;
-              padding: 5px;
-              border-radius: 50%;
-              transition: all 0.3s;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            transition: all 0.3s;
           }
-  
+
           .close-btn:hover {
-              color: #ff4757;
-              background: rgba(255, 71, 87, 0.1);
+            color: #ff4757;
+            background: rgba(255, 71, 87, 0.1);
           }
-  
+
           .question-input {
-              width: 100%;
-              background: rgba(0, 0, 0, 0.3);
-              border: 2px solid rgba(31, 68, 151, 0.3);
-              border-radius: 25px;
-              padding: 15px 20px;
-              color: white;
-              font-size: 16px;
-              font-family: inherit;
-              outline: none;
-              transition: all 0.3s;
-              box-sizing: border-box;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(31, 68, 151, 0.3);
+            border-radius: 25px;
+            padding: 15px 20px;
+            color: white;
+            font-size: 16px;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.3s;
+            box-sizing: border-box;
           }
-  
+
           .question-input::placeholder {
-              color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.4);
           }
-  
+
           .question-input:focus {
             border-color: #1f4497;
             box-shadow: 0 0 20px rgba(31, 68, 151, 0.3);
             background: rgba(0, 0, 0, 0.5);
           }
-  
+
           .question-input.error {
-              border-color: #ff4757;
-              box-shadow: 0 0 20px rgba(255, 71, 87, 0.5);
+            border-color: #ff4757;
+            box-shadow: 0 0 20px rgba(255, 71, 87, 0.5);
           }
-  
+
           .input-hint {
-              color: rgba(255, 255, 255, 0.5);
-              font-size: 12px;
-              margin-top: 10px;
-              text-align: center;
-              font-style: italic;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            margin-top: 10px;
+            text-align: center;
+            font-style: italic;
           }
-  
+
           .error-message {
-              color: #ff4757;
-              font-size: 12px;
-              margin-top: 8px;
-              text-align: center;
-              opacity: 0;
-              transition: opacity 0.3s;
+            color: #ff4757;
+            font-size: 12px;
+            margin-top: 8px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
           }
-  
+
           .error-message.show {
-              opacity: 1;
+            opacity: 1;
           }
-  
+
           /* Glitch effect for button text */
           .tic-button.glitch {
-              animation: glitch 0.3s;
+            animation: glitch 0.3s;
           }
-  
+
           @keyframes glitch {
-              0% { transform: translate(0); }
-              20% { transform: translate(-2px, 2px); }
-              40% { transform: translate(-2px, -2px); }
-              60% { transform: translate(2px, 2px); }
-              80% { transform: translate(2px, -2px); }
-              100% { transform: translate(0); }
+            0% {
+              transform: translate(0);
+            }
+
+            20% {
+              transform: translate(-2px, 2px);
+            }
+
+            40% {
+              transform: translate(-2px, -2px);
+            }
+
+            60% {
+              transform: translate(2px, 2px);
+            }
+
+            80% {
+              transform: translate(2px, -2px);
+            }
+
+            100% {
+              transform: translate(0);
+            }
           }
-  
+
           /* Shake animation for validation error */
           .shake {
-              animation: shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+            animation: shake 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
           }
-  
+
           @keyframes shake {
-              0%, 100% { transform: translateX(0); }
-              10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
-              20%, 40%, 60%, 80% { transform: translateX(8px); }
+
+            0%,
+            100% {
+              transform: translateX(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+              transform: translateX(-8px);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+              transform: translateX(8px);
+            }
           }
-  
+
           /* Typing indicator */
           .typing-indicator {
-              display: none;
-              color: rgba(31, 68, 151, 0.7);
-              font-size: 14px;
-              margin-top: 10px;
-              text-align: center;
+            display: none;
+            color: rgba(31, 68, 151, 0.7);
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
           }
-  
+
           .typing-indicator::after {
-              content: '';
-              display: inline-block;
-              width: 4px;
-              height: 4px;
-              border-radius: 50%;
-              background: #1f4497;
-              animation: blink 1.5s infinite;
-              margin-left: 5px;
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #1f4497;
+            animation: blink 1.5s infinite;
+            margin-left: 5px;
           }
-  
+
           @keyframes blink {
-              0%, 50% { opacity: 1; }
-              51%, 100% { opacity: 0; }
+
+            0%,
+            50% {
+              opacity: 1;
+            }
+
+            51%,
+            100% {
+              opacity: 0;
+            }
           }
-  
+
           @keyframes slideIn {
-              from {
-                  transform: translateX(100%);
-                  opacity: 0;
-              }
-              to {
-                  transform: translateX(0);
-                  opacity: 1;
-              }
+            from {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
           }
-      </style>
-      <div class="tic-container">
+        </style>
+        <div class="tic-container">
           <button class="tic-button" id="ticButton">
-              <span>Ask TIC</span>
+            <span>Ask TIC</span>
           </button>
-          
+
           <div class="input-container" id="inputContainer">
-              <div class="input-header">
-                  <div class="input-title">TIC Global Services</div>
-                  <button class="close-btn" id="closeBtn">×</button>
-              </div>
-              <input 
-                  type="text" 
-                  class="question-input" 
-                  id="questionInput" 
-                  placeholder="Ask us anything..."
-                  autocomplete="off"
-                  maxlength="500"
-              >
-              <div class="error-message" id="errorMessage">Please enter a question before submitting!</div>
-              <div class="input-hint">Press Enter to send</div>
-              <div class="typing-indicator" id="typingIndicator">Processing your question...</div>
+            <div class="input-header">
+              <div class="input-title">TIC Global Services</div>
+              <button class="close-btn" id="closeBtn">×</button>
+            </div>
+            <input type="text" class="question-input" id="questionInput" placeholder="Ask us anything..."
+              autocomplete="off" maxlength="500">
+            <div class="error-message" id="errorMessage">Please enter a question before submitting!</div>
+            <div class="input-hint">Press Enter to send</div>
+            <div class="typing-indicator" id="typingIndicator">Processing your question...</div>
           </div>
-      </div>
-  
-      <script>
-        class TICWidget {
+        </div>
+
+        <script>
+          class TICWidget {
             constructor() {
-                this.initializeElements();
-                this.setupEventListeners();
-                this.config = {
-                    scriptUrl: 'https://script.google.com/macros/s/AKfycbwFBkkS5Pi8grmPxMoLrwr4CYXFjsP_bGSUlnUot8wBegbKjErRefJYDMdOxxSFwGPbHw/exec',
-                    maxRetries: 3,
-                    retryDelay: 1000
-                };
-                
-                console.log('TIC Widget initialized with URL:', this.config.scriptUrl);
+              this.initializeElements();
+              this.setupEventListeners();
+              this.config = {
+                scriptUrl: 'https://script.google.com/macros/s/AKfycbwFBkkS5Pi8grmPxMoLrwr4CYXFjsP_bGSUlnUot8wBegbKjErRefJYDMdOxxSFwGPbHw/exec',
+                maxRetries: 3,
+                retryDelay: 1000
+              };
+
+              console.log('TIC Widget initialized with URL:', this.config.scriptUrl);
             }
-        
+
             initializeElements() {
-                this.ticButton = document.getElementById('ticButton');
-                this.inputContainer = document.getElementById('inputContainer');
-                this.closeBtn = document.getElementById('closeBtn');
-                this.questionInput = document.getElementById('questionInput');
-                this.typingIndicator = document.getElementById('typingIndicator');
-                this.errorMessage = document.getElementById('errorMessage');
+              this.ticButton = document.getElementById('ticButton');
+              this.inputContainer = document.getElementById('inputContainer');
+              this.closeBtn = document.getElementById('closeBtn');
+              this.questionInput = document.getElementById('questionInput');
+              this.typingIndicator = document.getElementById('typingIndicator');
+              this.errorMessage = document.getElementById('errorMessage');
             }
-        
+
             setupEventListeners() {
-                this.ticButton.addEventListener('click', () => this.openWidget());
-                this.closeBtn.addEventListener('click', () => this.closeWidget());
-                this.questionInput.addEventListener('keypress', (e) => this.handleKeyPress(e));
-                this.questionInput.addEventListener('input', () => this.clearError());
-                
-                document.addEventListener('click', (e) => this.handleOutsideClick(e));
+              this.ticButton.addEventListener('click', () => this.openWidget());
+              this.closeBtn.addEventListener('click', () => this.closeWidget());
+              this.questionInput.addEventListener('keypress', (e) => this.handleKeyPress(e));
+              this.questionInput.addEventListener('input', () => this.clearError());
+
+              document.addEventListener('click', (e) => this.handleOutsideClick(e));
             }
-        
+
             openWidget() {
-                this.ticButton.classList.add('glitch');
-                setTimeout(() => this.ticButton.classList.remove('glitch'), 300);
-                
-                this.ticButton.style.display = 'none';
-                this.inputContainer.style.display = 'block';
-                
-                setTimeout(() => {
-                    this.questionInput.focus();
-                }, 100);
+              this.ticButton.classList.add('glitch');
+              setTimeout(() => this.ticButton.classList.remove('glitch'), 300);
+
+              this.ticButton.style.display = 'none';
+              this.inputContainer.style.display = 'block';
+
+              setTimeout(() => {
+                this.questionInput.focus();
+              }, 100);
             }
-        
+
             closeWidget() {
-                this.inputContainer.style.display = 'none';
-                this.ticButton.style.display = 'block';
-                this.resetForm();
+              this.inputContainer.style.display = 'none';
+              this.ticButton.style.display = 'block';
+              this.resetForm();
             }
-        
+
             resetForm() {
-                this.questionInput.value = '';
-                this.clearError();
-                this.hideTypingIndicator();
+              this.questionInput.value = '';
+              this.clearError();
+              this.hideTypingIndicator();
             }
-        
+
             handleKeyPress(e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    this.submitQuestion();
-                }
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                this.submitQuestion();
+              }
             }
-        
+
             validateInput(question) {
-                if (!question.trim()) {
-                    this.shakeInput();
-                    return false;
-                }
-        
-                if (question.length < 10) {
-                    this.showError('Question must be at least 10 characters long!');
-                    this.shakeInput();
-                    return false;
-                }
-        
-                return true;
+              if (!question.trim()) {
+                this.shakeInput();
+                return false;
+              }
+
+              if (question.length < 10) {
+                this.showError('Question must be at least 10 characters long!');
+                this.shakeInput();
+                return false;
+              }
+
+              return true;
             }
-        
+
             showError(message) {
-                this.errorMessage.textContent = message;
-                this.errorMessage.style.color = '#ff4444';
-                this.errorMessage.classList.add('show');
-                this.questionInput.classList.add('error');
+              this.errorMessage.textContent = message;
+              this.errorMessage.style.color = '#ff4444';
+              this.errorMessage.classList.add('show');
+              this.questionInput.classList.add('error');
             }
-        
+
             showSuccess(message) {
-                this.errorMessage.textContent = message;
-                this.errorMessage.style.color = '#4CAF50';
-                this.errorMessage.classList.add('show');
-                this.questionInput.classList.remove('error');
+              this.errorMessage.textContent = message;
+              this.errorMessage.style.color = '#4CAF50';
+              this.errorMessage.classList.add('show');
+              this.questionInput.classList.remove('error');
             }
-        
+
             clearError() {
-                this.errorMessage.classList.remove('show');
-                this.questionInput.classList.remove('error');
+              this.errorMessage.classList.remove('show');
+              this.questionInput.classList.remove('error');
             }
-        
+
             shakeInput() {
-                this.inputContainer.classList.add('shake');
-                // setTimeout(() => {
-                //     this.inputContainer.classList.remove('shake');
-                // }, 600);
+              this.inputContainer.classList.add('shake');
+              // setTimeout(() => {
+              //     this.inputContainer.classList.remove('shake');
+              // }, 600);
             }
-        
+
             showTypingIndicator() {
-                this.typingIndicator.style.display = 'block';
-                this.questionInput.disabled = true;
+              this.typingIndicator.style.display = 'block';
+              this.questionInput.disabled = true;
             }
-        
+
             hideTypingIndicator() {
-                this.typingIndicator.style.display = 'none';
-                this.questionInput.disabled = false;
+              this.typingIndicator.style.display = 'none';
+              this.questionInput.disabled = false;
             }
-        
+
             async submitQuestion() {
-                const question = this.questionInput.value.trim();
-                if (!this.validateInput(question)) {
-                    return;
+              const question = this.questionInput.value.trim();
+              if (!this.validateInput(question)) {
+                return;
+              }
+
+              this.showTypingIndicator();
+              this.clearError();
+
+              try {
+                const success = await this.submitToGoogleScript(question);
+
+                if (success) {
+                  this.hideTypingIndicator();
+                  this.showSuccess('Question submitted successfully!');
+
+                  // Auto-close after 3 seconds
+                  setTimeout(() => {
+                    this.closeWidget();
+                  }, 3000);
+                } else {
+                  throw new Error('Failed to save question');
                 }
-        
-                this.showTypingIndicator();
-                this.clearError();
-        
-                try {
-                    const success = await this.submitToGoogleScript(question);
-                    
-                    if (success) {
-                        this.hideTypingIndicator();
-                        this.showSuccess('Question submitted successfully!');
-                        
-                        // Auto-close after 3 seconds
-                        setTimeout(() => {
-                            this.closeWidget();
-                        }, 3000);
-                    } else {
-                        throw new Error('Failed to save question');
-                    }
-                } catch (error) {
-                    console.error('Error saving question:', error);
-                    this.hideTypingIndicator();
-                    this.showError('Failed to submit question. Please try again.');
-                }
+              } catch (error) {
+                console.error('Error saving question:', error);
+                this.hideTypingIndicator();
+                this.showError('Failed to submit question. Please try again.');
+              }
             }
-        
+
             async submitToGoogleScript(question, retryCount = 0) {
-                try {
-                    console.log(`Attempt ${retryCount + 1} to submit:`, question);
-                    
-                    const formData = new URLSearchParams();
-                    formData.append('question', question);
-        
-                    const response = await fetch(this.config.scriptUrl, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                        body: formData.toString(),
-                    });
-        
-                    console.log('Response status:', response.status);
-                    
-                    if (response.ok || response.status === 200) {
-                        try {
-                            const responseText = await response.text();
-                            console.log('Response text:', responseText);
-                            
-                            try {
-                                const jsonResponse = JSON.parse(responseText);
-                                console.log('Parsed response:', jsonResponse);
-                                return jsonResponse.result === 'success';
-                            } catch (parseError) {
-                                console.log('Non-JSON response, assuming success');
-                                return true;
-                            }
-                        } catch (textError) {
-                            console.log('Could not read response text, but status OK - assuming success');
-                            return true;
-                        }
-                    } else {
-                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+              try {
+                console.log(`Attempt ${retryCount + 1} to submit:`, question);
+
+                const formData = new URLSearchParams();
+                formData.append('question', question);
+
+                const response = await fetch(this.config.scriptUrl, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  body: formData.toString(),
+                });
+
+                console.log('Response status:', response.status);
+
+                if (response.ok || response.status === 200) {
+                  try {
+                    const responseText = await response.text();
+                    console.log('Response text:', responseText);
+
+                    try {
+                      const jsonResponse = JSON.parse(responseText);
+                      console.log('Parsed response:', jsonResponse);
+                      return jsonResponse.result === 'success';
+                    } catch (parseError) {
+                      console.log('Non-JSON response, assuming success');
+                      return true;
                     }
-        
-                } catch (error) {
-                    console.error(`Attempt ${retryCount + 1} failed:`, error);
-                    
-                    if (retryCount < this.config.maxRetries) {
-                        console.log(`Retrying in ${this.config.retryDelay * (retryCount + 1)}ms...`);
-                        await this.delay(this.config.retryDelay * (retryCount + 1));
-                        return this.submitToGoogleScript(question, retryCount + 1);
-                    }
-                    
-                    throw error;
+                  } catch (textError) {
+                    console.log('Could not read response text, but status OK - assuming success');
+                    return true;
+                  }
+                } else {
+                  throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
+
+              } catch (error) {
+                console.error(`Attempt ${retryCount + 1} failed:`, error);
+
+                if (retryCount < this.config.maxRetries) {
+                  console.log(`Retrying in ${this.config.retryDelay * (retryCount + 1)}ms...`);
+                  await this.delay(this.config.retryDelay * (retryCount + 1));
+                  return this.submitToGoogleScript(question, retryCount + 1);
+                }
+
+                throw error;
+              }
             }
-        
+
             handleOutsideClick(e) {
-                if (!this.inputContainer.contains(e.target) && !this.ticButton.contains(e.target)) {
-                    if (this.inputContainer.style.display === 'block') {
-                        this.closeWidget();
-                    }
+              if (!this.inputContainer.contains(e.target) && !this.ticButton.contains(e.target)) {
+                if (this.inputContainer.style.display === 'block') {
+                  this.closeWidget();
                 }
+              }
             }
-        
+
             delay(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
+              return new Promise(resolve => setTimeout(resolve, ms));
             }
-        }
-        
-        // Initialize the widget when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
+          }
+
+          // Initialize the widget when DOM is loaded
+          document.addEventListener('DOMContentLoaded', () => {
             console.log('DOM loaded, initializing TIC Widget...');
             new TICWidget();
-        });
+          });
         </script>
       </div>
       <div sticky-video-element="" class="home-hero-video-wrapper">
         <div data-w-id="276abc31-2ee8-4d73-58e2-59969b288ca2" class="overlay"></div>
-        <div class="home-hero-video w-embed"><video class="cover-video" autoplay="" muted="" loop="" playsinline=""
-            poster="https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/65784e48cd6b78aa1f3cac92_ew-studio-poster-2.webp">
-            <source src="https://storage.googleapis.com/ew-assets/ew/Landing/ew-studio-reel-16-9-dec2023-2.mp4"
+        <div class="home-hero-video w-embed"><video class="cover-video" autoplay="" muted="false" loop="" playsinline=""
+            poster="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/IMG_4309%20(1).PNG?updatedAt=1758443761410">
+            <source src="./Assets/desktop.mp4"
               type="video/mp4">
 
             <style>
@@ -986,8 +1024,8 @@
         </div>
         <div class="home-hero-video-tablet-mobile w-embed"><video class="cover-video" autoplay="" muted="" loop=""
             playsinline=""
-            poster="https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/65784e483be3893ed74e440c_ew-studio-poster2-mobile.webp">
-            <source src="https://storage.googleapis.com/ew-assets/ew/Landing/ew-studio-reel-16-9-dec2023-2-mobile.mp4"
+            poster="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/IMG_4308%20(1).PNG?updatedAt=1758443762226">
+            <source src="./Assets/mobile.mp4"
               type="video/mp4">
 
             <style>
@@ -1009,7 +1047,32 @@
           <h3 class="heading-small">Work</h3>
           <h3 class="heading-small">↓</h3>
         </div>
-        <div class="w-layout-grid _2-col top-margin"><a id="w-node-_482e1bbf-40a6-1d71-8f28-70e055c9486e-27fddb8f"
+        <div class="w-layout-grid _2-col top-margin">
+          
+          
+          <a id="w-node-a701eabf-544e-71d2-1e35-354e6f8f5ff8-27fddb8f" href="https://shopsummr.com/"
+            class="card-m w-inline-block" target="_blank">
+            <img src="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/images/Summr_Banner_Noncomp.png?updatedAt=1758363694084" loading="lazy" alt="Mynt branding design case" class="parallax-img" />
+
+            <div class="card-title">
+              <h3 class="text-color-white">Summr<br /><span class="opacity-60"></span></h3>
+              <div class="tag text-color-white">Branding & 3D Website</div>
+            </div>
+          </a>
+          <a href=# id="w-node-_1688fe38-70be-fe49-38e0-90c5daebe886-27fddb8f " class="card-m w-inline-block"
+            target="_blank">
+            <div class="black-bg aderian"></div>
+            <img src="https://ik.imagekit.io/99y1fc9mh/BCF/others/BCF_Impeller360_compressed.gif?updatedAt=1758269297386"
+              loading="eager" alt="Grand branding design case" class="parallax-img" />
+            <!-- <video src="https://ik.imagekit.io/4o0qshqnhn/TIC%20Official/Nv%20STUDIO%20(1).mp4?updatedAt=1748243358209"
+            class="parallax-img" autoplay muted loop playsinline></video> -->
+            <div class="card-title">
+              <h3 class="text-color-white">BCF<br /><span class="opacity-70">Cast Factory</span></h3>
+              <div class="tag text-color-white">UIUX &amp; Web</div>
+            </div>
+          </a>
+          
+          <a id="w-node-_482e1bbf-40a6-1d71-8f28-70e055c9486e-27fddb8f"
             href="https://zappenergy.in/" class="card-l w-inline-block" target="_blank">
             <!-- <img
               src="https://ik.imagekit.io/7da6fpjdo/zapp.webp?updatedAt=1739787145757"
@@ -1032,63 +1095,61 @@
 
 
           <a id="w-node-a701eabf-544e-71d2-1e35-354e6f8f5ff8-27fddb8f" href="https://panchayatvoting.com/"
-          class="card-m w-inline-block" target="_blank">
-          <img src="/Assets/Panchayat.jpg"
-            loading="lazy" alt="Mynt branding design case" class="parallax-img" />
+            class="card-m w-inline-block" target="_blank">
+            <img src="/Assets/Panchayat.jpg" loading="lazy" alt="Mynt branding design case" class="parallax-img" />
 
-          <div class="card-title">
-            <h3 class="text-color-white">Panchayat<br /><span class="opacity-60">Amazon Prime</span></h3>
-            <div class="tag text-color-white">WebApp</div>
-          </div>
-        </a><a href=# id="w-node-_1688fe38-70be-fe49-38e0-90c5daebe886-27fddb8f "
-          class="card-m w-inline-block" target="_blank">
-          <div class="black-bg aderian"></div>
-          <img
-            src="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/images/IMG_8504.JPG?updatedAt=1751540984725"
-            loading="eager" alt="Grand branding design case" class="parallax-img" />
-          <!-- <video src="https://ik.imagekit.io/4o0qshqnhn/TIC%20Official/Nv%20STUDIO%20(1).mp4?updatedAt=1748243358209"
+            <div class="card-title">
+              <h3 class="text-color-white">Panchayat<br /><span class="opacity-60">Amazon Prime</span></h3>
+              <div class="tag text-color-white">WebApp</div>
+            </div>
+          </a>
+          <a href=# id="w-node-_1688fe38-70be-fe49-38e0-90c5daebe886-27fddb8f " class="card-m w-inline-block"
+            target="_blank">
+            <div class="black-bg aderian"></div>
+            <img src="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/images/IMG_8504.JPG?updatedAt=1751540984725"
+              loading="eager" alt="Grand branding design case" class="parallax-img" />
+            <!-- <video src="https://ik.imagekit.io/4o0qshqnhn/TIC%20Official/Nv%20STUDIO%20(1).mp4?updatedAt=1748243358209"
             class="parallax-img" autoplay muted loop playsinline></video> -->
-          <div class="card-title">
-            <h3 class="text-color-white">Enclave<br /><span class="opacity-70">Block Chain</span></h3>
-            <div class="tag text-color-white">UIUX &amp; Web</div>
-          </div>
-        </a>
+            <div class="card-title">
+              <h3 class="text-color-white">Enclave<br /><span class="opacity-70">Block Chain</span></h3>
+              <div class="tag text-color-white">UIUX &amp; Web</div>
+            </div>
+          </a>
 
-        <a id="w-node-_01f6883d-63fc-0c54-dd4a-58a59d001dea-27fddb8f" href="https://www.hausofchaos.co"
-        class="card-l w-inline-block" target="_blank"><img
-          src="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/images/2140ab03-aeb4-45dc-942f-613e2eb99e80.png?updatedAt=1754045769348"
-          loading="eager" alt="Lylli branding design case" class="parallax-img" />
-        <div class="card-title vaerdex">
-          <h3 class="text-color-white">Haus of Chaos<span class="opacity-60"><br />Chennai</span>
-          </h3>
-          <div class="tag text-color-white">Website Development</div>
-        </div>
-      </a>
-
-      
-
-      <a id="w-node-_1fd75fad-35c6-71bb-d85b-2c7305f1955a-27fddb8f" href="https://twopointzeroclothing.com/"
-      class="card-m w-inline-block" target="_blank"> <video
-        src="/Assets/index/2.0.mp4"
-        class="parallax-img" autoplay muted loop playsinline></video>
-
-      <div class="card-title">
-        <h3 class="" style="color: white;">2.0<br /><span class="opacity-40">Clothing</h3>
-        <div style="color: white;" class="tag text-color-black">E-Commerce WebApp</div>
-      </div>
-    </a>
+          <a id="w-node-_01f6883d-63fc-0c54-dd4a-58a59d001dea-27fddb8f" href="https://www.hausofchaos.co"
+            class="card-l w-inline-block" target="_blank"><img
+              src="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/images/2140ab03-aeb4-45dc-942f-613e2eb99e80.png?updatedAt=1754045769348"
+              loading="eager" alt="Lylli branding design case" class="parallax-img" />
+            <div class="card-title vaerdex">
+              <h3 class="text-color-white">Haus of Chaos<span class="opacity-60"><br />Chennai</span>
+              </h3>
+              <div class="tag text-color-white">Website Development</div>
+            </div>
+          </a>
 
 
-    <a id="w-node-_357a29a8-66c2-0173-dd53-97c29b7d602d-27fddb8f" href="https://staap.in/"
-      class="card-m the-gang w-inline-block" target="_blank"><img src="/Assets/staap.jpg" loading="lazy"
-        width="1796" alt="Sendify branding design case" class="parallax-img" />
-      <div class="card-title">
-        <h3 style="color: white;">Staap<br />‍<span class="opacity-40">Stories of Art</span></h3>
-        <div class="tag text-color-white-50">Website</div>
-      </div>
-    </a>
-          
-          
+
+          <a id="w-node-_1fd75fad-35c6-71bb-d85b-2c7305f1955a-27fddb8f" href="https://twopointzeroclothing.com/"
+            class="card-m w-inline-block" target="_blank"> <video src="/Assets/index/2.0.mp4" class="parallax-img"
+              autoplay muted loop playsinline></video>
+
+            <div class="card-title">
+              <h3 class="" style="color: white;">2.0<br /><span class="opacity-40">Clothing</h3>
+              <div style="color: white;" class="tag text-color-black">E-Commerce WebApp</div>
+            </div>
+          </a>
+
+
+          <a id="w-node-_357a29a8-66c2-0173-dd53-97c29b7d602d-27fddb8f" href="https://staap.in/"
+            class="card-m the-gang w-inline-block" target="_blank"><img src="/Assets/staap.jpg" loading="lazy"
+              width="1796" alt="Sendify branding design case" class="parallax-img" />
+            <div class="card-title">
+              <h3 style="color: white;">Staap<br />‍<span class="opacity-40">Stories of Art</span></h3>
+              <div class="tag text-color-white-50">Website</div>
+            </div>
+          </a>
+
+
           <a id="w-node-_6d12251a-959d-086e-24a8-106e7bee05d5-27fddb8f" href="/work/lylli"
             class="card-m hide w-inline-block" target="_blank"><img
               src="https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/63adafd9dbb8c1011fea2f0a_lylli-photo-fixed.jpg"
@@ -1380,32 +1441,32 @@
             </div>
           </a>
 
-         
+
 
           <a id="w-node-a701eabf-544e-71d2-1e35-354e6f8f5ff8-27fddb8f" href="https://tech-venture-iota.vercel.app/"
-          class="card-m w-inline-block" target="_blank">
-          <img src="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/images/works/techvechure.jpg?updatedAt=1729853718122"
-            loading="lazy" alt="Mynt branding design case" class="parallax-img" />
+            class="card-m w-inline-block" target="_blank">
+            <img src="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/images/works/techvechure.jpg?updatedAt=1729853718122"
+              loading="lazy" alt="Mynt branding design case" class="parallax-img" />
 
 
-          <div class="card-title">
-            <h3 class="text-color-white">Techvenchure<br /><span class="opacity-60">Dubai</span></h3>
-            <div class="tag text-color-white">3D Website</div>
-          </div>
-        </a>
-        <a href="https://vols.noricai.com/" id="w-node-_1688fe38-70be-fe49-38e0-90c5daebe886-27fddb8f "
-          class="card-m w-inline-block" target="_blank">
-          <div class="black-bg aderian"></div>
-          <!-- <img
+            <div class="card-title">
+              <h3 class="text-color-white">Techvenchure<br /><span class="opacity-60">Dubai</span></h3>
+              <div class="tag text-color-white">3D Website</div>
+            </div>
+          </a>
+          <a href="https://vols.noricai.com/" id="w-node-_1688fe38-70be-fe49-38e0-90c5daebe886-27fddb8f "
+            class="card-m w-inline-block" target="_blank">
+            <div class="black-bg aderian"></div>
+            <!-- <img
             src="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/images/works/zeus.jpg?updatedAt=1729853788615"
             loading="eager" alt="Grand branding design case" class="parallax-img" /> -->
-          <video src="https://ik.imagekit.io/4o0qshqnhn/TIC%20Official/Nv%20STUDIO%20(1).mp4?updatedAt=1748243358209"
-            class="parallax-img" autoplay muted loop playsinline></video>
-          <div class="card-title">
-            <h3 class="text-color-white">VOLS<br /><span class="opacity-70">Future of Data</span></h3>
-            <div class="tag text-color-white">Web App Development</div>
-          </div>
-        </a>
+            <video src="https://ik.imagekit.io/4o0qshqnhn/TIC%20Official/Nv%20STUDIO%20(1).mp4?updatedAt=1748243358209"
+              class="parallax-img" autoplay muted loop playsinline></video>
+            <div class="card-title">
+              <h3 class="text-color-white">VOLS<br /><span class="opacity-70">Future of Data</span></h3>
+              <div class="tag text-color-white">Web App Development</div>
+            </div>
+          </a>
 
           <a id="w-node-_01f6883d-63fc-0c54-dd4a-58a59d001dea-27fddb8f" href="https://mediumturtle.com/"
             class="card-l w-inline-block" target="_blank"><img
@@ -1439,8 +1500,9 @@
             </div>
           </a>
 
-          <a id="w-node-e0c5886d-74c7-1dc8-50cb-f9fda3423df1-27fddb8f" href="https://66d60a225cc7523aa94a2647--resilient-dieffenbachia-91361a.netlify.app/"
-            target="_blank" class="card-l sana-labs _2 w-inline-block">
+          <a id="w-node-e0c5886d-74c7-1dc8-50cb-f9fda3423df1-27fddb8f"
+            href="https://66d60a225cc7523aa94a2647--resilient-dieffenbachia-91361a.netlify.app/" target="_blank"
+            class="card-l sana-labs _2 w-inline-block">
             <img
               src="https://ik.imagekit.io/99y1fc9mh/TIC_Globe/images/works/lifestyleinvest.jpg?updatedAt=1729853575346"
               srcset="

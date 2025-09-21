@@ -1,7 +1,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: sans-serif
+  font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -2207,7 +2207,8 @@ textarea.w-select {
 body {
   color: #f5f5f5;
   background-color: #f5f5f5;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: 1vw;
   font-weight: 500;
   line-height: 1
@@ -2218,7 +2219,8 @@ h1 {
   letter-spacing: -.08em;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: 10.87em;
   font-weight: 500;
   line-height: 89%
@@ -2229,7 +2231,8 @@ h2 {
   letter-spacing: -.07em;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: 4.35em;
   font-weight: 500;
   line-height: 100%
@@ -2240,7 +2243,8 @@ h3 {
   letter-spacing: -.06em;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: 3.04em;
   font-weight: 500;
   line-height: 104%
@@ -2274,7 +2278,8 @@ p {
   color: #000;
   letter-spacing: -.03em;
   margin-bottom: 10px;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: 1.2em;
   font-weight: 400;
   line-height: 120%
@@ -2305,7 +2310,8 @@ img {
 .tag {
   color: #b7b7b7;
   letter-spacing: -.06em;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: 1.3em;
   font-weight: 500
 }
@@ -2325,7 +2331,8 @@ img {
   border: 1px solid #000;
   border-radius: 100px;
   padding: .435em .87em;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: 1.74em;
   font-weight: 500;
   text-decoration: none;
@@ -3510,7 +3517,8 @@ img {
   color: #fff;
   letter-spacing: -.03em;
   white-space: nowrap;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: 1.5em;
   font-weight: 500
 }
@@ -3688,7 +3696,8 @@ img {
   border: 1px solid #000;
   border-radius: 100px;
   padding: .67em .87em .65em 1.15em;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: 1.74em;
   font-weight: 500;
   text-decoration: none;
@@ -3759,7 +3768,8 @@ img {
 .footer-text {
   color: #0000004d;
   letter-spacing: -.03em;
-  font-family: Scto grotesk a, sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-size: .98rem;
   font-weight: 500
 }
@@ -3850,7 +3860,8 @@ img {
   border: 1px solid #000;
   border-radius: 100px;
   padding: .65em 1.3em;
-  font-family: Scto grotesk a, sans-serif;
+    font-family: 'Inter', sans-serif;
+
   font-size: 1.74em;
   font-weight: 500;
   text-decoration: none;
@@ -4290,7 +4301,8 @@ img {
   border-radius: 100px;
   margin-right: .43em;
   padding: .435em .87em;
-  font-family: Scto grotesk a, sans-serif;
+    font-family: 'Inter', sans-serif;
+
   font-size: 1.3em;
   font-weight: 500;
   text-decoration: none;
@@ -4336,7 +4348,8 @@ img {
   border: 1px solid #fff;
   border-radius: 100px;
   padding: .435em .87em;
-  font-family: Scto grotesk a, sans-serif;
+    font-family: 'Inter', sans-serif;
+
   font-size: 1.3em;
   font-weight: 500;
   text-decoration: none;
@@ -4361,7 +4374,8 @@ img {
   border-radius: 100em;
   margin-right: .87em;
   padding: .43em .87em;
-  font-family: Scto grotesk a, sans-serif;
+    font-family: 'Inter', sans-serif;
+
   font-size: 1.3em;
   font-weight: 500
 }
@@ -26675,7 +26689,8 @@ img {
   letter-spacing: -.08em;
   margin-top: 0;
   margin-bottom: 70px;
-  font-family: Scto grotesk a, sans-serif;
+    font-family: 'Inter', sans-serif;
+
   font-size: 6em;
   font-weight: 500;
   line-height: 89%;
@@ -26975,7 +26990,8 @@ hr{
   color: #000;
     letter-spacing: -.03em;
     margin-bottom: 10px;
-    font-family: Scto grotesk a, sans-serif;
+      font-family: 'Inter', sans-serif;
+
     font-size: 30px;
     font-weight: 400;
     line-height: 120%;
@@ -26985,7 +27001,8 @@ hr{
   .seo-h1,.seo-h2 {
     font-size: 1.1em; /* Adjust font size for tablets */
     margin-bottom: 8px; /* Reduce margin */
-    font-family: Scto grotesk a, sans-serif;
+      font-family: 'Inter', sans-serif;
+
     font-weight: 0%;
     line-height: 130%; /* Adjust line height */
   }
@@ -26996,7 +27013,8 @@ hr{
   .seo-h1,.seo-h2 {
     font-size: 1.2em; /* Adjust font size for smaller screens */
     margin-bottom: 6px; /* Further reduce margin */
-    font-family: Scto grotesk a, sans-serif;
+      font-family: 'Inter', sans-serif;
+
     font-weight: 0%;
     line-height: 140%; /* Increase line height for readability */
   }
