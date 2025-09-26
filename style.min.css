@@ -20074,7 +20074,7 @@ img {
 
   .home-hero-heading {
     letter-spacing: -.07em;
-    font-size: 12.5em
+    font-size: 10.5em
   }
 
   .home-hero-text {
@@ -22542,7 +22542,10 @@ img {
 
   .home-hero-text-wrapper {
     height: 100%;
-    padding-top: 50%
+    padding-top: 50%;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+
   }
 
   .home-hero-text {
