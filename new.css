@@ -2083,7 +2083,7 @@ textarea.w-input,textarea.w-select {
 body {
     color: #f5f5f5;
     background-color: #f5f5f5;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1vw;
     font-weight: 500;
     line-height: 1
@@ -2094,7 +2094,7 @@ h1 {
     letter-spacing: -.08em;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 10.87em;
     font-weight: 500;
     line-height: 89%
@@ -2105,7 +2105,7 @@ h2 {
     letter-spacing: -.07em;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 4.35em;
     font-weight: 500;
     line-height: 100%
@@ -2116,7 +2116,7 @@ h3 {
     letter-spacing: -.06em;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 3.04em;
     font-weight: 500;
     line-height: 104%
@@ -2150,7 +2150,7 @@ p {
     color: #000;
     letter-spacing: -.03em;
     margin-bottom: 10px;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.2em;
     font-weight: 400;
     line-height: 120%
@@ -2181,7 +2181,7 @@ img {
 .tag {
     color: #b7b7b7;
     letter-spacing: -.06em;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.3em;
     font-weight: 500
 }
@@ -2201,7 +2201,7 @@ img {
     border: 1px solid #000;
     border-radius: 100px;
     padding: .435em .87em;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.74em;
     font-weight: 500;
     text-decoration: none;
@@ -3349,7 +3349,7 @@ img {
     color: #fff;
     letter-spacing: -.03em;
     white-space: nowrap;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.5em;
     font-weight: 500
 }
@@ -3525,7 +3525,7 @@ img {
     border: 1px solid #000;
     border-radius: 100px;
     padding: .67em .87em .65em 1.15em;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.74em;
     font-weight: 500;
     text-decoration: none;
@@ -3595,7 +3595,7 @@ img {
 .footer-text {
     color: #0000004d;
     letter-spacing: -.03em;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: .98rem;
     font-weight: 500
 }
@@ -3686,7 +3686,7 @@ img {
     border: 1px solid #000;
     border-radius: 100px;
     padding: .65em 1.3em;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.74em;
     font-weight: 500;
     text-decoration: none;
@@ -4124,7 +4124,7 @@ img {
     border-radius: 100px;
     margin-right: .43em;
     padding: .435em .87em;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.3em;
     font-weight: 500;
     text-decoration: none;
@@ -4170,7 +4170,7 @@ img {
     border: 1px solid #fff;
     border-radius: 100px;
     padding: .435em .87em;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.3em;
     font-weight: 500;
     text-decoration: none;
@@ -4195,7 +4195,7 @@ img {
     border-radius: 100em;
     margin-right: .87em;
     padding: .43em .87em;
-    font-family: Scto grotesk a,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.3em;
     font-weight: 500
 }
@@ -24945,7 +24945,7 @@ img {
 }
 
 @font-face {
-    font-family: 'Scto grotesk a';
+    font-family: Inter, sans-serif;
     src: url('https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/623c8e22ba071ce71b8e9ddc_Scto%20Grotesk%20A%20Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
@@ -24953,7 +24953,7 @@ img {
 }
 
 @font-face {
-    font-family: 'Scto grotesk a';
+    font-family: Inter, sans-serif;
     src: url('https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/623c8e22ba071c46928e9ddd_Scto%20Grotesk%20A%20Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
@@ -24961,7 +24961,7 @@ img {
 }
 
 @font-face {
-    font-family: 'Scto grotesk a';
+    font-family: Inter, sans-serif;
     src: url('https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/623c8e22ba071c1d2c8e9dde_Scto%20Grotesk%20A%20Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
@@ -24969,7 +24969,7 @@ img {
 }
 
 @font-face {
-    font-family: 'Scto grotesk a';
+    font-family: Inter, sans-serif;
     src: url('https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/623c8e22ba071c53088e9ddf_Scto%20Grotesk%20A%20Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;

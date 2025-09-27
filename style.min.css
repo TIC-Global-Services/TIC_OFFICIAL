@@ -261,7 +261,7 @@ body {
   background-color: #fff;
   min-height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1125,7 +1125,7 @@ textarea.w-select {
 .w-widget-twitter-count-shim .w-widget-twitter-count-inner {
   text-align: center;
   color: #999;
-  font-family: serif;
+  font-family: Inter, sans-serif;
   font-size: 15px;
   line-height: 12px;
   position: relative
@@ -26586,7 +26586,7 @@ img {
 }
 
 @font-face {
-  font-family: 'Scto grotesk a';
+  font-family: Inter, sans-serif;
   src: url('https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/623c8e22ba071ce71b8e9ddc_Scto%20Grotesk%20A%20Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
@@ -26594,7 +26594,7 @@ img {
 }
 
 @font-face {
-  font-family: 'Scto grotesk a';
+  font-family: Inter, sans-serif;
   src: url('https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/623c8e22ba071c46928e9ddd_Scto%20Grotesk%20A%20Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
@@ -26602,7 +26602,7 @@ img {
 }
 
 @font-face {
-  font-family: 'Scto grotesk a';
+  font-family: Inter, sans-serif;
   src: url('https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/623c8e22ba071c1d2c8e9dde_Scto%20Grotesk%20A%20Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
@@ -26610,7 +26610,7 @@ img {
 }
 
 @font-face {
-  font-family: 'Scto grotesk a';
+  font-family: Inter, sans-serif;
   src: url('https://cdn.prod.website-files.com/623c8e22ba071c15df8e9dd6/623c8e22ba071c53088e9ddf_Scto%20Grotesk%20A%20Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
